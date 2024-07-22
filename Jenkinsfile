@@ -1,5 +1,8 @@
 pipeline {
     agent any
+        environment {
+        SONARQUBE_URL = 'http://sonarqube:9000'
+    }
     stages {
         stage('Checkout') {
             steps {
